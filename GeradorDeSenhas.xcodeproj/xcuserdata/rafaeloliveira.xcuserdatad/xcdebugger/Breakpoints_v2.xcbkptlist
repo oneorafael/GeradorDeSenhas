@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeradorDeSenhas/PasswordsViewController.swift"
+            timestampString = "552531272.8393"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "PasswordsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "variable initialization expression of GeradorDeSenhas.PasswordsViewController.numberofPasswords : Swift.Int"
+                  moduleName = "GeradorDeSenhas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaeloliveira/Desktop/GeradorDeSenhas/GeradorDeSenhas/PasswordsViewController.swift"
+                  timestampString = "552528702.597957"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeradorDeSenhas.PasswordsViewController.numberofPasswords.getter : Swift.Int"
+                  moduleName = "GeradorDeSenhas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaeloliveira/Desktop/GeradorDeSenhas/GeradorDeSenhas/PasswordsViewController.swift"
+                  timestampString = "552528702.601617"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "102">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeradorDeSenhas.PasswordsViewController.numberofPasswords.setter : Swift.Int"
+                  moduleName = "GeradorDeSenhas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaeloliveira/Desktop/GeradorDeSenhas/GeradorDeSenhas/PasswordsViewController.swift"
+                  timestampString = "552528702.605354"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeradorDeSenhas.PasswordsViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; GeradorDeSenhas.PasswordsViewController"
+                  moduleName = "GeradorDeSenhas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaeloliveira/Desktop/GeradorDeSenhas/GeradorDeSenhas/PasswordsViewController.swift"
+                  timestampString = "552528702.609171"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "265">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeradorDeSenhas.PasswordsViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;GeradorDeSenhas.PasswordsViewController&gt;"
+                  moduleName = "GeradorDeSenhas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaeloliveira/Desktop/GeradorDeSenhas/GeradorDeSenhas/PasswordsViewController.swift"
+                  timestampString = "552528702.611937"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "236">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeradorDeSenhas/PasswordsViewController.swift"
+            timestampString = "552531272.839509"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "PasswordsViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
