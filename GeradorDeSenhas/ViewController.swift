@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
     
     @IBOutlet weak var tfTotalPasswords: UITextField!
     
@@ -27,6 +27,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let passwordsViewController = segue.destination as! PasswordsViewController
         if let numberofpasswords = Int(tfTotalPasswords.text!){
@@ -43,6 +47,7 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     
+
     
 }
 

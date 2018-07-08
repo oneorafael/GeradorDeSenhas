@@ -25,6 +25,8 @@ class PasswordsViewController: UIViewController {
         super.viewDidLoad()
         passwordgenerator = PGenerator(numberOfCharacteres: numberOfCharacteres, useLetters: useLetters, useNumbers: useNumbers, useCapitalLetters: useCapitalLetters, useSpecialCharacteres: useSpecialCharacteres)
         generate()
+        
+        
     }
     
     func generate(){
@@ -39,9 +41,6 @@ class PasswordsViewController: UIViewController {
     @IBAction func btnGenerate(_ sender: Any) {
         generate()
     }
-    
-    
-    
-    
+
     
 }

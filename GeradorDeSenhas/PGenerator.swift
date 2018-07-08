@@ -37,7 +37,7 @@ class PGenerator {
     
     func generate(total:Int) ->[String]{
         passwords.removeAll() //limpar a lista antes de criar novas opçoes de senhas
-        var universe: String = " "
+        var universe: String = ""
         if useSpecialCharacteres {
             universe += specialCharacteres
         }
@@ -53,7 +53,7 @@ class PGenerator {
         
         let universeArray = Array(universe)
         while passwords.count < total {
-            var password = " "
+            var password = ""
             for _ in 1...numberOfCharacteres{
                 let index = Int(arc4random_uniform(UInt32(universe.count)))
                 password += String(universeArray[index])
