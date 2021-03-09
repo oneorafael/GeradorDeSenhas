@@ -12,12 +12,12 @@
         <!--Senhas-->
         <scene sceneID="vUC-Qw-F5s">
             <objects>
-                <viewController id="Gci-B7-hrI" sceneMemberID="viewController">
+                <viewController id="Gci-B7-hrI" customClass="PasswordViewController" customModule="GeradorDeSenhas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6hj-Vu-UsL">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="142" translatesAutoresizingMaskIntoConstraints="NO" id="g3r-1t-dxn">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="142" translatesAutoresizingMaskIntoConstraints="NO" id="g3r-1t-dxn">
                                 <rect key="frame" x="20" y="245" width="350" height="20.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Quantidade de caracteres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="J8m-FD-J2b">
@@ -36,6 +36,9 @@
                             </stackView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="1" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="lXZ-tO-U8O">
                                 <rect key="frame" x="18" y="280.33333333333331" width="354" height="31"/>
+                                <connections>
+                                    <action selector="sliderNumberOfCharacteresHasChanged:" destination="Gci-B7-hrI" eventType="valueChanged" id="X7d-ZM-zVW"/>
+                                </connections>
                             </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="165" translatesAutoresizingMaskIntoConstraints="NO" id="f1Z-qc-hrT">
                                 <rect key="frame" x="20" y="461.33333333333331" width="350" height="31"/>
@@ -111,6 +114,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Gerar Senha"/>
+                                <connections>
+                                    <action selector="GenerateButtonHasPressed:" destination="Gci-B7-hrI" eventType="touchUpInside" id="7R5-x1-R7U"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MDq-cP-qWH"/>
@@ -146,6 +152,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Senhas" id="uc9-18-aoX"/>
+                    <connections>
+                        <outlet property="lbNumberOfCharacteres" destination="vva-5a-gBs" id="Ry9-f5-tfI"/>
+                        <outlet property="swCapitalLetters" destination="hHI-R5-3tp" id="xfH-n9-BMe"/>
+                        <outlet property="swLowercase" destination="aHm-tY-dGo" id="aPX-4t-u3I"/>
+                        <outlet property="swNumbers" destination="PqB-bg-oeX" id="hJk-Vp-jdM"/>
+                        <outlet property="swSpecialCharacteres" destination="Oj5-As-eMI" id="wtg-Gh-DuT"/>
+                        <outlet property="tfPasswordGenerated" destination="OD0-KX-Ydj" id="GZB-Ea-A9p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rk6-VU-7cL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
