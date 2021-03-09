@@ -44,7 +44,6 @@ class PasswordViewController: UIViewController {
         tfPasswordGenerated.text = ""
         guard let senderValue = lbNumberOfCharacteres.text else {return}
         guard let number = Int(senderValue) else {return}
-        
         if !swCapitalLetters.isOn && !swLowercase.isOn && !swNumbers.isOn && !swSpecialCharacteres.isOn {
             print("ao menos 1 opção precisa estar marcada")
             //TODO: Enviar alerta
