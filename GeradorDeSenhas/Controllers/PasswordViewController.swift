@@ -45,10 +45,18 @@ class PasswordViewController: UIViewController {
         if !swCapitalLetters.isOn && !swLowercase.isOn && !swNumbers.isOn && !swSpecialCharacteres.isOn {
             print("ao menos 1 opção precisa estar marcada")
             //TODO: Enviar alerta
+            getAlert(_message: "Selecione ao menos uma opção de dados antes de gerar a sua senha.")
         } else {
             let password = pass.generate(NumberOfCharacteres: Int(number)!, useCapitalLetters: swCapitalLetters.isOn, useLowercase: swLowercase.isOn, useNumbers: swNumbers.isOn, useSpecialCharacteres: swSpecialCharacteres.isOn)
             tfPasswordGenerated.text = password
         }
+    }
+    
+    //    Alert
+    func getAlert(_message:String){
+        let alert = UIAlertController(title: "Alerta", message: _message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
