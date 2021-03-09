@@ -15,19 +15,23 @@
 		674C5D8025F7B60300343FEC /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674C5D7F25F7B60300343FEC /* Password.swift */; };
 		674C5D8425F7B64F00343FEC /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674C5D8325F7B64F00343FEC /* PasswordViewModel.swift */; };
 		674C5D8C25F7F45D00343FEC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 674C5D8B25F7F45D00343FEC /* .gitignore */; };
+		8E6416D32F2FEC6F593FAC49 /* Pods_GeradorDeSenhas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219A393BAE70710AD7436AE7 /* Pods_GeradorDeSenhas.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		219A393BAE70710AD7436AE7 /* Pods_GeradorDeSenhas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeradorDeSenhas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C1147020EEBFDB00869BFF /* GeradorDeSenhas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeradorDeSenhas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C1147320EEBFDB00869BFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C1147820EEBFDB00869BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27C1147A20EEBFDD00869BFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27C1147D20EEBFDD00869BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27C1147F20EEBFDD00869BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57D3D83B1A5A899535538358 /* Pods-GeradorDeSenhas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeradorDeSenhas.release.xcconfig"; path = "Target Support Files/Pods-GeradorDeSenhas/Pods-GeradorDeSenhas.release.xcconfig"; sourceTree = "<group>"; };
 		674C5D7B25F7AED300343FEC /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		674C5D7F25F7B60300343FEC /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
 		674C5D8325F7B64F00343FEC /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 		674C5D8B25F7F45D00343FEC /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		CCE1FDE6AA14FEF17EB446C1 /* Pods-GeradorDeSenhas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeradorDeSenhas.debug.xcconfig"; path = "Target Support Files/Pods-GeradorDeSenhas/Pods-GeradorDeSenhas.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6416D32F2FEC6F593FAC49 /* Pods_GeradorDeSenhas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +52,8 @@
 				674C5D8B25F7F45D00343FEC /* .gitignore */,
 				27C1147220EEBFDB00869BFF /* GeradorDeSenhas */,
 				27C1147120EEBFDB00869BFF /* Products */,
+				E77D99D504E89E568F82C83E /* Pods */,
+				824E0A729E5DD1D3052C3675 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +104,24 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		824E0A729E5DD1D3052C3675 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				219A393BAE70710AD7436AE7 /* Pods_GeradorDeSenhas.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E77D99D504E89E568F82C83E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCE1FDE6AA14FEF17EB446C1 /* Pods-GeradorDeSenhas.debug.xcconfig */,
+				57D3D83B1A5A899535538358 /* Pods-GeradorDeSenhas.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,9 +129,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27C1148220EEBFDD00869BFF /* Build configuration list for PBXNativeTarget "GeradorDeSenhas" */;
 			buildPhases = (
+				5D6FE11AB993D9689CC14D3D /* [CP] Check Pods Manifest.lock */,
 				27C1146C20EEBFDB00869BFF /* Sources */,
 				27C1146D20EEBFDB00869BFF /* Frameworks */,
 				27C1146E20EEBFDB00869BFF /* Resources */,
+				AF1B646724D250FDC8737A85 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,6 +191,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D6FE11AB993D9689CC14D3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeradorDeSenhas-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF1B646724D250FDC8737A85 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeradorDeSenhas/Pods-GeradorDeSenhas-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeradorDeSenhas/Pods-GeradorDeSenhas-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeradorDeSenhas/Pods-GeradorDeSenhas-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27C1146C20EEBFDB00869BFF /* Sources */ = {
@@ -317,6 +386,7 @@
 		};
 		27C1148320EEBFDD00869BFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCE1FDE6AA14FEF17EB446C1 /* Pods-GeradorDeSenhas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -334,6 +404,7 @@
 		};
 		27C1148420EEBFDD00869BFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57D3D83B1A5A899535538358 /* Pods-GeradorDeSenhas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NotificationBannerSwift
 class PasswordViewController: UIViewController {
     
 //    MARK: - IBOutlets
@@ -41,13 +42,19 @@ class PasswordViewController: UIViewController {
     /// Se ao menos um switch está ativado, ele retorna a senha gerada pela função generate da ViewModel.
     func generateNewPassword(){
         tfPasswordGenerated.text = ""
-        guard let number = lbNumberOfCharacteres.text else {return}
+        guard let senderValue = lbNumberOfCharacteres.text else {return}
+        guard let number = Int(senderValue) else {return}
+        
         if !swCapitalLetters.isOn && !swLowercase.isOn && !swNumbers.isOn && !swSpecialCharacteres.isOn {
             print("ao menos 1 opção precisa estar marcada")
             //TODO: Enviar alerta
             getAlert(_message: "Selecione ao menos uma opção de dados antes de gerar a sua senha.")
         } else {
-            let password = pass.generate(NumberOfCharacteres: Int(number)!, useCapitalLetters: swCapitalLetters.isOn, useLowercase: swLowercase.isOn, useNumbers: swNumbers.isOn, useSpecialCharacteres: swSpecialCharacteres.isOn)
+            if number < 8 {
+                let banner = NotificationBanner(title: "Senha insegura", subtitle: "Utilize uma senha com no minimo 8 digitos", style: .danger)
+                banner.show()
+            }
+            let password = pass.generate(NumberOfCharacteres: number, useCapitalLetters: swCapitalLetters.isOn, useLowercase: swLowercase.isOn, useNumbers: swNumbers.isOn, useSpecialCharacteres: swSpecialCharacteres.isOn)
             tfPasswordGenerated.text = password
         }
     }
