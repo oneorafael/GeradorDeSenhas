@@ -11,8 +11,9 @@
 		27C1147920EEBFDB00869BFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C1147720EEBFDB00869BFF /* Main.storyboard */; };
 		27C1147B20EEBFDD00869BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C1147A20EEBFDD00869BFF /* Assets.xcassets */; };
 		27C1147E20EEBFDD00869BFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C1147C20EEBFDD00869BFF /* LaunchScreen.storyboard */; };
-		27C1148820EEE25E00869BFF /* PGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C1148720EEE25E00869BFF /* PGenerator.swift */; };
 		674C5D7C25F7AED300343FEC /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674C5D7B25F7AED300343FEC /* PasswordViewController.swift */; };
+		674C5D8025F7B60300343FEC /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674C5D7F25F7B60300343FEC /* Password.swift */; };
+		674C5D8425F7B64F00343FEC /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674C5D8325F7B64F00343FEC /* PasswordViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +23,9 @@
 		27C1147A20EEBFDD00869BFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27C1147D20EEBFDD00869BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27C1147F20EEBFDD00869BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27C1148720EEE25E00869BFF /* PGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGenerator.swift; sourceTree = "<group>"; };
 		674C5D7B25F7AED300343FEC /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		674C5D7F25F7B60300343FEC /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
+		674C5D8325F7B64F00343FEC /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +58,11 @@
 		27C1147220EEBFDB00869BFF /* GeradorDeSenhas */ = {
 			isa = PBXGroup;
 			children = (
+				674C5D8225F7B62700343FEC /* ViewModels */,
+				674C5D7E25F7B5EB00343FEC /* Models */,
 				674C5D7A25F7AEC000343FEC /* Controllers */,
 				27C1147320EEBFDB00869BFF /* AppDelegate.swift */,
 				27C1147720EEBFDB00869BFF /* Main.storyboard */,
-				27C1148720EEE25E00869BFF /* PGenerator.swift */,
 				27C1147A20EEBFDD00869BFF /* Assets.xcassets */,
 				27C1147C20EEBFDD00869BFF /* LaunchScreen.storyboard */,
 				27C1147F20EEBFDD00869BFF /* Info.plist */,
@@ -73,6 +76,22 @@
 				674C5D7B25F7AED300343FEC /* PasswordViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		674C5D7E25F7B5EB00343FEC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				674C5D7F25F7B60300343FEC /* Password.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		674C5D8225F7B62700343FEC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				674C5D8325F7B64F00343FEC /* PasswordViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +166,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27C1148820EEE25E00869BFF /* PGenerator.swift in Sources */,
+				674C5D8025F7B60300343FEC /* Password.swift in Sources */,
 				27C1147420EEBFDB00869BFF /* AppDelegate.swift in Sources */,
 				674C5D7C25F7AED300343FEC /* PasswordViewController.swift in Sources */,
+				674C5D8425F7B64F00343FEC /* PasswordViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
