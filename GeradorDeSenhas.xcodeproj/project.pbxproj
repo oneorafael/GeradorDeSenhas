@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,8 +15,19 @@
 		674C5D8025F7B60300343FEC /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674C5D7F25F7B60300343FEC /* Password.swift */; };
 		674C5D8425F7B64F00343FEC /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674C5D8325F7B64F00343FEC /* PasswordViewModel.swift */; };
 		674C5D8C25F7F45D00343FEC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 674C5D8B25F7F45D00343FEC /* .gitignore */; };
+		67ED6F7925F8FF5C004E09C7 /* PasswordViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67ED6F7825F8FF5C004E09C7 /* PasswordViewControllerTests.swift */; };
 		8E6416D32F2FEC6F593FAC49 /* Pods_GeradorDeSenhas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219A393BAE70710AD7436AE7 /* Pods_GeradorDeSenhas.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67ED6F6325F8F7CE004E09C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27C1146820EEBFDB00869BFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27C1146F20EEBFDB00869BFF;
+			remoteInfo = GeradorDeSenhas;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		219A393BAE70710AD7436AE7 /* Pods_GeradorDeSenhas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeradorDeSenhas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +42,9 @@
 		674C5D7F25F7B60300343FEC /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
 		674C5D8325F7B64F00343FEC /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 		674C5D8B25F7F45D00343FEC /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		67ED6F5E25F8F7CE004E09C7 /* GeradorDeSenhasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeradorDeSenhasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67ED6F6225F8F7CE004E09C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67ED6F7825F8FF5C004E09C7 /* PasswordViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewControllerTests.swift; sourceTree = "<group>"; };
 		CCE1FDE6AA14FEF17EB446C1 /* Pods-GeradorDeSenhas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeradorDeSenhas.debug.xcconfig"; path = "Target Support Files/Pods-GeradorDeSenhas/Pods-GeradorDeSenhas.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,6 +57,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		67ED6F5B25F8F7CE004E09C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -51,6 +72,7 @@
 			children = (
 				674C5D8B25F7F45D00343FEC /* .gitignore */,
 				27C1147220EEBFDB00869BFF /* GeradorDeSenhas */,
+				67ED6F5F25F8F7CE004E09C7 /* GeradorDeSenhasTests */,
 				27C1147120EEBFDB00869BFF /* Products */,
 				E77D99D504E89E568F82C83E /* Pods */,
 				824E0A729E5DD1D3052C3675 /* Frameworks */,
@@ -61,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				27C1147020EEBFDB00869BFF /* GeradorDeSenhas.app */,
+				67ED6F5E25F8F7CE004E09C7 /* GeradorDeSenhasTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +127,15 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		67ED6F5F25F8F7CE004E09C7 /* GeradorDeSenhasTests */ = {
+			isa = PBXGroup;
+			children = (
+				67ED6F6225F8F7CE004E09C7 /* Info.plist */,
+				67ED6F7825F8FF5C004E09C7 /* PasswordViewControllerTests.swift */,
+			);
+			path = GeradorDeSenhasTests;
+			sourceTree = "<group>";
+		};
 		824E0A729E5DD1D3052C3675 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +150,6 @@
 				CCE1FDE6AA14FEF17EB446C1 /* Pods-GeradorDeSenhas.debug.xcconfig */,
 				57D3D83B1A5A899535538358 /* Pods-GeradorDeSenhas.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -144,19 +175,42 @@
 			productReference = 27C1147020EEBFDB00869BFF /* GeradorDeSenhas.app */;
 			productType = "com.apple.product-type.application";
 		};
+		67ED6F5D25F8F7CE004E09C7 /* GeradorDeSenhasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67ED6F6725F8F7CE004E09C7 /* Build configuration list for PBXNativeTarget "GeradorDeSenhasTests" */;
+			buildPhases = (
+				67ED6F5A25F8F7CE004E09C7 /* Sources */,
+				67ED6F5B25F8F7CE004E09C7 /* Frameworks */,
+				67ED6F5C25F8F7CE004E09C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67ED6F6425F8F7CE004E09C7 /* PBXTargetDependency */,
+			);
+			name = GeradorDeSenhasTests;
+			productName = GeradorDeSenhasTests;
+			productReference = 67ED6F5E25F8F7CE004E09C7 /* GeradorDeSenhasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		27C1146820EEBFDB00869BFF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Rafael Oliveira";
 				TargetAttributes = {
 					27C1146F20EEBFDB00869BFF = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1240;
+					};
+					67ED6F5D25F8F7CE004E09C7 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+						TestTargetID = 27C1146F20EEBFDB00869BFF;
 					};
 				};
 			};
@@ -174,6 +228,7 @@
 			projectRoot = "";
 			targets = (
 				27C1146F20EEBFDB00869BFF /* GeradorDeSenhas */,
+				67ED6F5D25F8F7CE004E09C7 /* GeradorDeSenhasTests */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +242,13 @@
 				27C1147E20EEBFDD00869BFF /* LaunchScreen.storyboard in Resources */,
 				27C1147B20EEBFDD00869BFF /* Assets.xcassets in Resources */,
 				27C1147920EEBFDB00869BFF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67ED6F5C25F8F7CE004E09C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +308,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		67ED6F5A25F8F7CE004E09C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67ED6F7925F8FF5C004E09C7 /* PasswordViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67ED6F6425F8F7CE004E09C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27C1146F20EEBFDB00869BFF /* GeradorDeSenhas */;
+			targetProxy = 67ED6F6325F8F7CE004E09C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		27C1147720EEBFDB00869BFF /* Main.storyboard */ = {
@@ -420,6 +498,53 @@
 			};
 			name = Release;
 		};
+		67ED6F6525F8F7CE004E09C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LW7U9NL7A7;
+				INFOPLIST_FILE = GeradorDeSenhasTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rolvr.GeradorDeSenhasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeradorDeSenhas.app/GeradorDeSenhas";
+			};
+			name = Debug;
+		};
+		67ED6F6625F8F7CE004E09C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LW7U9NL7A7;
+				INFOPLIST_FILE = GeradorDeSenhasTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rolvr.GeradorDeSenhasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeradorDeSenhas.app/GeradorDeSenhas";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -437,6 +562,15 @@
 			buildConfigurations = (
 				27C1148320EEBFDD00869BFF /* Debug */,
 				27C1148420EEBFDD00869BFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67ED6F6725F8F7CE004E09C7 /* Build configuration list for PBXNativeTarget "GeradorDeSenhasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67ED6F6525F8F7CE004E09C7 /* Debug */,
+				67ED6F6625F8F7CE004E09C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

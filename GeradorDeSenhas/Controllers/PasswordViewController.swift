@@ -21,6 +21,7 @@ class PasswordViewController: UIViewController {
     var pass = PasswordViewModel()
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         
     }
     

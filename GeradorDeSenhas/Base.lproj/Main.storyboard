@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Senhas-->
+        <!--Main-->
         <scene sceneID="vUC-Qw-F5s">
             <objects>
-                <viewController id="Gci-B7-hrI" customClass="PasswordViewController" customModule="GeradorDeSenhas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PasswordViewController" title="Main" id="Gci-B7-hrI" customClass="PasswordViewController" customModule="GeradorDeSenhas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6hj-Vu-UsL">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,6 +168,7 @@
         <!--Navigation Controller-->
         <scene sceneID="6IU-SZ-9yq">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erC-sF-3fQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Rz-9I-f9t" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="x37-zI-eLR">
@@ -179,7 +180,6 @@
                         <segue destination="Gci-B7-hrI" kind="relationship" relationship="rootViewController" id="3fO-cb-pAc"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="erC-sF-3fQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="213.59999999999999" y="240.62968515742131"/>
         </scene>
