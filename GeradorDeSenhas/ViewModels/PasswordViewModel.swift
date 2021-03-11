@@ -53,4 +53,30 @@ class PasswordViewModel {
 
         return password
     }
+    
+    /// Verifica se ao menos 1 switch está ativado, caso contrario ele não permitirá que a função generate seja chamada
+    /// - Parameters:
+    ///   - useCapitalLetters: Bool
+    ///   - useLowercase: bool
+    ///   - useNumbers: bool
+    ///   - useSpecialCharacteres: bool
+    /// - Returns: bool
+    func checkingSwitchStatus(useCapitalLetters:Bool,useLowercase: Bool, useNumbers:Bool, useSpecialCharacteres:Bool) -> Bool {
+        var status = true
+        if useCapitalLetters == false && useLowercase == false &&  useNumbers == false && useSpecialCharacteres == false {
+            status = false
+        }
+        return status
+    }
+    
+    /// Verifica se a senha possui ao menos 8 caracteres.
+    /// - Parameter NumberOfCharacters: Int
+    /// - Returns: Bool
+    func checkNumberOfCharacters(NumberOfCharacters:Int) -> Bool {
+        var passwordSecurity = true
+        if NumberOfCharacters < 8 {
+            passwordSecurity = false
+        }
+        return passwordSecurity
+    }
 }

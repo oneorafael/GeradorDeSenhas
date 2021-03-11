@@ -10,7 +10,7 @@ import UIKit
 import NotificationBannerSwift
 class PasswordViewController: UIViewController {
     
-//    MARK: - IBOutlets
+    //    MARK: - IBOutlets
     @IBOutlet weak var lbNumberOfCharacteres: UILabel!
     @IBOutlet weak var swCapitalLetters: UISwitch!
     @IBOutlet weak var swLowercase: UISwitch!
@@ -18,14 +18,12 @@ class PasswordViewController: UIViewController {
     @IBOutlet weak var swSpecialCharacteres: UISwitch!
     @IBOutlet weak var tfPasswordGenerated: UITextField!
     
-    var pass = PasswordViewModel()
-    
+    var passwordViewModel = PasswordViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
-//    MARK:- Actions
+    //    MARK:- Actions
     
     /// Altera o valor de caracteres de acordo com o slider
     /// - Parameter sender: UISlider
@@ -40,21 +38,23 @@ class PasswordViewController: UIViewController {
     }
     
     /// Verifica primeiro se ao menos um switch está ativo, caso contrario retorna um alerta.
+    /// Verifica a senha possui mais de 8 caracteres, caso contrario retorna um banner
     /// Se ao menos um switch está ativado, ele retorna a senha gerada pela função generate da ViewModel.
     func generateNewPassword(){
         tfPasswordGenerated.text = ""
         guard let senderValue = lbNumberOfCharacteres.text else {return}
         guard let number = Int(senderValue) else {return}
-        if !swCapitalLetters.isOn && !swLowercase.isOn && !swNumbers.isOn && !swSpecialCharacteres.isOn {
-            print("ao menos 1 opção precisa estar marcada")
-            //TODO: Enviar alerta
+        let status = passwordViewModel.checkingSwitchStatus(useCapitalLetters: swCapitalLetters.isOn, useLowercase: swLowercase.isOn , useNumbers: swNumbers.isOn, useSpecialCharacteres: swSpecialCharacteres.isOn)
+        let passwordSecurityStatus = passwordViewModel.checkNumberOfCharacters(NumberOfCharacters: number)
+        
+        if status == false{
             getAlert(_message: "Selecione ao menos uma opção de dados antes de gerar a sua senha.")
         } else {
-            if number < 8 {
+            if passwordSecurityStatus == false {
                 let banner = NotificationBanner(title: "Senha insegura", subtitle: "Utilize uma senha com no minimo 8 digitos", style: .danger)
                 banner.show()
             }
-            let password = pass.generate(NumberOfCharacteres: number, useCapitalLetters: swCapitalLetters.isOn, useLowercase: swLowercase.isOn, useNumbers: swNumbers.isOn, useSpecialCharacteres: swSpecialCharacteres.isOn)
+            let password = passwordViewModel.generate(NumberOfCharacteres: number, useCapitalLetters: swCapitalLetters.isOn, useLowercase: swLowercase.isOn, useNumbers: swNumbers.isOn, useSpecialCharacteres: swSpecialCharacteres.isOn)
             tfPasswordGenerated.text = password
         }
     }
