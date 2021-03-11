@@ -17,6 +17,7 @@ class PasswordViewController: UIViewController {
     @IBOutlet weak var swNumbers: UISwitch!
     @IBOutlet weak var swSpecialCharacteres: UISwitch!
     @IBOutlet weak var tfPasswordGenerated: UITextField!
+    @IBOutlet weak var generateButton: UIButton!
     
     var passwordViewModel = PasswordViewModel()
     override func viewDidLoad() {

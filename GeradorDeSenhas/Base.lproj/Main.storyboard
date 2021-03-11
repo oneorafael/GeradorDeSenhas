@@ -153,6 +153,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Senhas" id="uc9-18-aoX"/>
                     <connections>
+                        <outlet property="generateButton" destination="cQ5-9f-UPV" id="tJ4-DK-dxB"/>
                         <outlet property="lbNumberOfCharacteres" destination="vva-5a-gBs" id="Ry9-f5-tfI"/>
                         <outlet property="swCapitalLetters" destination="hHI-R5-3tp" id="xfH-n9-BMe"/>
                         <outlet property="swLowercase" destination="aHm-tY-dGo" id="aPX-4t-u3I"/>
@@ -168,7 +169,6 @@
         <!--Navigation Controller-->
         <scene sceneID="6IU-SZ-9yq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="erC-sF-3fQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Rz-9I-f9t" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="x37-zI-eLR">
@@ -180,6 +180,7 @@
                         <segue destination="Gci-B7-hrI" kind="relationship" relationship="rootViewController" id="3fO-cb-pAc"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erC-sF-3fQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="213.59999999999999" y="240.62968515742131"/>
         </scene>

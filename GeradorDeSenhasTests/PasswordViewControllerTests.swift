@@ -33,4 +33,16 @@ class PasswordViewControllerTests: XCTestCase {
     func testPasswordViewController_WhenCreated_PasswordTextFieldShouldBeEmpty() {
         XCTAssertEqual(sut.tfPasswordGenerated.text, "")
     }
+    
+    func testPasswordViewController_WhenCreated_HasGeneratePressedButtonAction() {
+        // Arrange
+        let generateButton: UIButton = try! XCTUnwrap(sut.generateButton, "generateButton does not reference outlet")
+        // Action
+        let generateButtonActions = try! XCTUnwrap(generateButton.actions(forTarget: sut, forControlEvent: .touchUpInside), "there's no action assigned to it")
+        
+        // Assert
+        XCTAssertEqual(generateButtonActions.count, 1)
+        XCTAssertEqual(generateButtonActions.first , "GenerateButtonHasPressed:", "Theres no action with this name")
+    }
+    
 }
