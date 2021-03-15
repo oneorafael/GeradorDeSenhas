@@ -15,6 +15,8 @@
 		674C5D8025F7B60300343FEC /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674C5D7F25F7B60300343FEC /* Password.swift */; };
 		674C5D8425F7B64F00343FEC /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674C5D8325F7B64F00343FEC /* PasswordViewModel.swift */; };
 		674C5D8C25F7F45D00343FEC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 674C5D8B25F7F45D00343FEC /* .gitignore */; };
+		677A991625FFE38C00D084EF /* PasswordViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677A991525FFE38C00D084EF /* PasswordViewModelTests.swift */; };
+		677A991A25FFFE2600D084EF /* PasswordConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677A991925FFFE2600D084EF /* PasswordConstants.swift */; };
 		67ED6F7925F8FF5C004E09C7 /* PasswordViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67ED6F7825F8FF5C004E09C7 /* PasswordViewControllerTests.swift */; };
 		8E6416D32F2FEC6F593FAC49 /* Pods_GeradorDeSenhas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219A393BAE70710AD7436AE7 /* Pods_GeradorDeSenhas.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,8 @@
 		674C5D7F25F7B60300343FEC /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
 		674C5D8325F7B64F00343FEC /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 		674C5D8B25F7F45D00343FEC /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		677A991525FFE38C00D084EF /* PasswordViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModelTests.swift; sourceTree = "<group>"; };
+		677A991925FFFE2600D084EF /* PasswordConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordConstants.swift; sourceTree = "<group>"; };
 		67ED6F5E25F8F7CE004E09C7 /* GeradorDeSenhasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeradorDeSenhasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67ED6F6225F8F7CE004E09C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67ED6F7825F8FF5C004E09C7 /* PasswordViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewControllerTests.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 				27C1147A20EEBFDD00869BFF /* Assets.xcassets */,
 				27C1147C20EEBFDD00869BFF /* LaunchScreen.storyboard */,
 				27C1147F20EEBFDD00869BFF /* Info.plist */,
+				677A991925FFFE2600D084EF /* PasswordConstants.swift */,
 			);
 			path = GeradorDeSenhas;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			children = (
 				67ED6F6225F8F7CE004E09C7 /* Info.plist */,
 				67ED6F7825F8FF5C004E09C7 /* PasswordViewControllerTests.swift */,
+				677A991525FFE38C00D084EF /* PasswordViewModelTests.swift */,
 			);
 			path = GeradorDeSenhasTests;
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 				674C5D8025F7B60300343FEC /* Password.swift in Sources */,
 				27C1147420EEBFDB00869BFF /* AppDelegate.swift in Sources */,
 				674C5D7C25F7AED300343FEC /* PasswordViewController.swift in Sources */,
+				677A991A25FFFE2600D084EF /* PasswordConstants.swift in Sources */,
 				674C5D8425F7B64F00343FEC /* PasswordViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67ED6F7925F8FF5C004E09C7 /* PasswordViewControllerTests.swift in Sources */,
+				677A991625FFE38C00D084EF /* PasswordViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

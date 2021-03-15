@@ -10,39 +10,61 @@ import Foundation
 
 class PasswordViewModel {
     
-    var password: Password!
-    var passwordGenerated: String {return password.passwordGenerated}
+    var passwordModel: Password!
+    var passwordGenerated: String {return passwordModel.passwordGenerated}
     var passwords:[String] = []
+    var passwordCharacteres = ""
+    var password = ""
     
-    /// Verifica que tipo de valores o usuario quer que a senha possua de acordo com a disposição dos UIswitch da ViewController.
-    /// Gera a senha pegando valores contidos no passwordCharacteres
-    /// - Parameters:
-    ///   - NumberOfCharacteres: default 8. Usuario pode alterar entre 1 e 30
-    ///   - useCapitalLetters: Bool
-    ///   - useLowercase: Bool
-    ///   - useNumbers: Bool
-    ///   - useSpecialCharacteres:  Bool
-    /// - Returns: String password
-    func generate(NumberOfCharacteres:Int,useCapitalLetters:Bool,useLowercase: Bool, useNumbers:Bool, useSpecialCharacteres:Bool) -> String {
-        passwords.removeAll()
-        var passwordCharacteres = ""
-        var password = ""
-        
-        if useLowercase {
+    
+    func useLowercase(lowercase:Bool) -> Bool {
+        var returnValue = false
+        if lowercase == true {
             passwordCharacteres += "abcdefghijklmnopqrstuvxwyz"
+            returnValue = true
         }
-        if useNumbers {
+        return returnValue
+    }
+    
+    func useNumbers(numbers:Bool) -> Bool {
+        var returnValue = false
+        if numbers == true {
             passwordCharacteres += "1234567890"
+            returnValue = true
         }
-        if useSpecialCharacteres {
+        return returnValue
+    }
+    
+    func useSpecialCharacters(specialCharacters:Bool) -> Bool {
+        var returnValue = false
+        if specialCharacters == true {
             passwordCharacteres += "=-!@#$%^&*()-_,.?/"
+            returnValue = true
         }
-        if useCapitalLetters {
+        return returnValue
+    }
+    
+    func useCapitalLetters(capitalLetters:Bool) -> Bool {
+        var returnValue = false
+        if capitalLetters == true {
             passwordCharacteres += "abcdefghijklmnopqrstuvxwyz".uppercased()
+            returnValue = true
         }
-        
+        return returnValue
+    }
+    
+    func NumberOfCharactersIsValid(number:Int) -> Bool {
+        var itsSecurityPassword = true
+        if number < PasswordConstants.numberOfCharacters_min {
+            itsSecurityPassword = false
+        }
+        return itsSecurityPassword
+    }
+    
+    func generate(NumberOfCharacteres:Int) -> String {
+        passwords.removeAll()
         let passwordCharacteresArray = Array(passwordCharacteres)
-        let numberOfPasswords = 1
+        let numberOfPasswords = PasswordConstants.numberOfPasswords
         while passwords.count < numberOfPasswords {
             for _ in 1...NumberOfCharacteres {
                 let index = Int(arc4random_uniform(UInt32(passwordCharacteres.count)))
@@ -62,21 +84,11 @@ class PasswordViewModel {
     ///   - useSpecialCharacteres: bool
     /// - Returns: bool
     func checkingSwitchStatus(useCapitalLetters:Bool,useLowercase: Bool, useNumbers:Bool, useSpecialCharacteres:Bool) -> Bool {
+//        TODO: Mudar para a ViewController essa verificação para disparar os alerts e notifications
         var status = true
         if useCapitalLetters == false && useLowercase == false &&  useNumbers == false && useSpecialCharacteres == false {
             status = false
         }
         return status
-    }
-    
-    /// Verifica se a senha possui ao menos 8 caracteres.
-    /// - Parameter NumberOfCharacters: Int
-    /// - Returns: Bool
-    func checkNumberOfCharacters(NumberOfCharacters:Int) -> Bool {
-        var passwordSecurity = true
-        if NumberOfCharacters < 8 {
-            passwordSecurity = false
-        }
-        return passwordSecurity
     }
 }
