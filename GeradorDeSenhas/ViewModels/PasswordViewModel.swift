@@ -13,14 +13,14 @@ class PasswordViewModel {
     var passwordModel: Password!
     var passwordGenerated: String {return passwordModel.passwordGenerated}
     var passwords:[String] = []
-    var passwordCharacteres = ""
+    var passwordCharacters = ""
     var password = ""
     
     
     func useLowercase(lowercase:Bool) -> Bool {
         var returnValue = false
         if lowercase == true {
-            passwordCharacteres += "abcdefghijklmnopqrstuvxwyz"
+            passwordCharacters += "abcdefghijklmnopqrstuvxwyz"
             returnValue = true
         }
         return returnValue
@@ -29,7 +29,7 @@ class PasswordViewModel {
     func useNumbers(numbers:Bool) -> Bool {
         var returnValue = false
         if numbers == true {
-            passwordCharacteres += "1234567890"
+            passwordCharacters += "1234567890"
             returnValue = true
         }
         return returnValue
@@ -38,7 +38,7 @@ class PasswordViewModel {
     func useSpecialCharacters(specialCharacters:Bool) -> Bool {
         var returnValue = false
         if specialCharacters == true {
-            passwordCharacteres += "=-!@#$%^&*()-_,.?/"
+            passwordCharacters += "=-!@#$%^&*()-_,.?/"
             returnValue = true
         }
         return returnValue
@@ -47,7 +47,7 @@ class PasswordViewModel {
     func useCapitalLetters(capitalLetters:Bool) -> Bool {
         var returnValue = false
         if capitalLetters == true {
-            passwordCharacteres += "abcdefghijklmnopqrstuvxwyz".uppercased()
+            passwordCharacters += "abcdefghijklmnopqrstuvxwyz".uppercased()
             returnValue = true
         }
         return returnValue
@@ -61,14 +61,15 @@ class PasswordViewModel {
         return itsSecurityPassword
     }
     
-    func generate(NumberOfCharacteres:Int) -> String {
+    func generate(NumberOfCharacters:Int) -> String {
+        // TODO: criar teste para isso
         passwords.removeAll()
-        let passwordCharacteresArray = Array(passwordCharacteres)
+        let passwordCharactersArray = Array(passwordCharacters)
         let numberOfPasswords = PasswordConstants.numberOfPasswords
         while passwords.count < numberOfPasswords {
-            for _ in 1...NumberOfCharacteres {
-                let index = Int(arc4random_uniform(UInt32(passwordCharacteres.count)))
-                password += String(passwordCharacteresArray[index])
+            for _ in 1...NumberOfCharacters {
+                let index = Int(arc4random_uniform(UInt32(passwordCharacters.count)))
+                password += String(passwordCharactersArray[index])
             }
             passwords.append(password)
         }
@@ -81,12 +82,12 @@ class PasswordViewModel {
     ///   - useCapitalLetters: Bool
     ///   - useLowercase: bool
     ///   - useNumbers: bool
-    ///   - useSpecialCharacteres: bool
+    ///   - useSpecialCharacters: bool
     /// - Returns: bool
-    func checkingSwitchStatus(useCapitalLetters:Bool,useLowercase: Bool, useNumbers:Bool, useSpecialCharacteres:Bool) -> Bool {
+    func checkingSwitchStatus(useCapitalLetters:Bool,useLowercase: Bool, useNumbers:Bool, useSpecialCharacters:Bool) -> Bool {
 //        TODO: Mudar para a ViewController essa verificação para disparar os alerts e notifications
         var status = true
-        if useCapitalLetters == false && useLowercase == false &&  useNumbers == false && useSpecialCharacteres == false {
+        if useCapitalLetters == false && useLowercase == false &&  useNumbers == false && useSpecialCharacters == false {
             status = false
         }
         return status
