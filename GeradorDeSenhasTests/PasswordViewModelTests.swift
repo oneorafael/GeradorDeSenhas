@@ -79,9 +79,9 @@ class PasswordViewModelTests: XCTestCase {
     func testPasswordViewModel_WhenDontUseCapitalLetters_ShouldReturnFalse() {
         // Act
         // Arrange
-        let useCapitalLetters = sut.useCapitalLetters(capitalLetters:true)
+        let useCapitalLetters = sut.useCapitalLetters(capitalLetters:false)
         // Assert
-        XCTAssertTrue(useCapitalLetters, "useCapitalLetters() method should return false but return true")
+        XCTAssertFalse(useCapitalLetters, "useCapitalLetters() method should return false but return true")
     }
     
     func testPasswordViewModel_WhenNumberOfCaractersIsValid_shouldReturnTrue() {
@@ -100,8 +100,19 @@ class PasswordViewModelTests: XCTestCase {
         XCTAssertFalse(NumberOfCharacters)
     }
     
-    func testPasswordViewModel_WhenPasswordGeneratedItsNotNull_shouldReturnTrue() {
-        let passwordGenerated = sut.generate(NumberOfCharacters: 8)
+    func testPasswordViewModel_WhenPasswordGeneratedItsNotNill_shouldReturnTrue() {
+        let passwordGenerated = sut.passwordGenerate(numberfCharacters: 10, lowercase: true, numbers: true, SpecialCharacters: true, capitalLetters: true)
         XCTAssertNotNil(passwordGenerated, "")
+    }
+    
+    func testPAsswordViewModel_WhenSwitchesAreNotOff_shouldReturnTrue() {
+        let checkingSwitchStatus = sut.checkingSwitchStatus(useCapitalLetters: true, useLowercase: true, useNumbers: true, useSpecialCharacters: true)
+        XCTAssertTrue(checkingSwitchStatus, "")
+    }
+    
+    func testPasswordViewModel_WhenAllSwitchesAreOff_ShouldReturnFalse() {
+        let checkingSwitchStatus = sut.checkingSwitchStatus(useCapitalLetters: false, useLowercase: false, useNumbers: false, useSpecialCharacters: false)
+        
+        XCTAssertFalse(checkingSwitchStatus)
     }
 }
