@@ -12,12 +12,9 @@ import XCTest
 class PasswordViewModelTests: XCTestCase {
     
     var sut: PasswordViewModel!
-    
     override func setUp() {
         sut = PasswordViewModel()
-        
     }
-    
     override func tearDown() {
         sut = nil
     }
@@ -25,12 +22,12 @@ class PasswordViewModelTests: XCTestCase {
     func testPasswordViewModel_WhenUseLowercaseOption_ShouldReturnTrue() {
         // Act
         sut = PasswordViewModel()
-        
         // Arrange
         let useLowercaseOption = sut.useLowercase(lowercase: true)
         // Assert
         XCTAssertTrue(useLowercaseOption,"useLowercaseOption() method should return true but return false")
     }
+    
     func testPasswordViewModel_WhenDontUseLowercaseOption_ShouldReturnFalse() {
         // Act
         // Arrange
@@ -41,11 +38,10 @@ class PasswordViewModelTests: XCTestCase {
     
     func testPasswordViewModel_WhenUseNumbers_ShouldReturnTrue() {
         // Act
-        let useNumbersOption = sut.useNumbers(numbers:true)
         // Arrange
-        XCTAssertTrue(useNumbersOption, "useNumbers() method should return true but return false")
+        let useNumbersOption = sut.useNumbers(numbers:true)
         // Assert
-        
+        XCTAssertTrue(useNumbersOption, "useNumbers() method should return true but return false")
     }
     
     func testPasswordViewModel_WhenDontUseNumbers_ShouldReturnFalse() {
@@ -54,7 +50,6 @@ class PasswordViewModelTests: XCTestCase {
         let useNumbersOption = sut.useNumbers(numbers:false)
         // Assert
         XCTAssertFalse(useNumbersOption, "useNumbers() method should return false but return true")
-
     }
     
     func testPasswordViewModel_WhenUseSpecialCharacters_ShouldReturnTrue() {
@@ -64,6 +59,7 @@ class PasswordViewModelTests: XCTestCase {
         // Assert
         XCTAssertTrue(useSpecialCharacters, "useSpecialCharacters() method should return true but return false")
     }
+    
     func testPasswordViewModel_WhenDontUseSpecialCharacters_ShouldReturnFalse() {
         // Act
         // Arrange
@@ -88,7 +84,7 @@ class PasswordViewModelTests: XCTestCase {
         XCTAssertTrue(useCapitalLetters, "useCapitalLetters() method should return false but return true")
     }
     
-    func testPasswordViewModel_WhenNumberOfCaractersIsValid_shouldReturnTrue(){
+    func testPasswordViewModel_WhenNumberOfCaractersIsValid_shouldReturnTrue() {
         // Act
         // Arrange
         let NumberOfCharacters = sut.NumberOfCharactersIsValid(number: 8)
@@ -96,11 +92,16 @@ class PasswordViewModelTests: XCTestCase {
         XCTAssertTrue(NumberOfCharacters)
     }
     
-    func testPasswordViewModel_WhenNumberOfCaractersIsInvalid_shouldReturnFalse(){
+    func testPasswordViewModel_WhenNumberOfCaractersIsInvalid_shouldReturnFalse() {
         // Act
         // Arrange
         let NumberOfCharacters = sut.NumberOfCharactersIsValid(number: 2)
         // Assert
         XCTAssertFalse(NumberOfCharacters)
+    }
+    
+    func testPasswordViewModel_WhenPasswordGeneratedItsNotNull_shouldReturnTrue() {
+        let passwordGenerated = sut.generate(NumberOfCharacters: 8)
+        XCTAssertNotNil(passwordGenerated, "")
     }
 }

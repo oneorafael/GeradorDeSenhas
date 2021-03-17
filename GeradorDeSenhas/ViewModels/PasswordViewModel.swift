@@ -73,7 +73,7 @@ class PasswordViewModel {
             }
             passwords.append(password)
         }
-
+        print("Senha gerada: \(password)")
         return password
     }
     

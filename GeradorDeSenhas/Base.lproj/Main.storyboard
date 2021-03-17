@@ -155,6 +155,7 @@
                     <connections>
                         <outlet property="generateButton" destination="cQ5-9f-UPV" id="tJ4-DK-dxB"/>
                         <outlet property="lbNumberOfCharacteres" destination="vva-5a-gBs" id="Ry9-f5-tfI"/>
+                        <outlet property="slNumberOfCharacters" destination="lXZ-tO-U8O" id="XgT-d0-dKS"/>
                         <outlet property="swCapitalLetters" destination="hHI-R5-3tp" id="xfH-n9-BMe"/>
                         <outlet property="swLowercase" destination="aHm-tY-dGo" id="aPX-4t-u3I"/>
                         <outlet property="swNumbers" destination="PqB-bg-oeX" id="hJk-Vp-jdM"/>

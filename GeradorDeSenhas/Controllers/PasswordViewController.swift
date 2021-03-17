@@ -18,10 +18,13 @@ class PasswordViewController: UIViewController {
     @IBOutlet weak var swSpecialCharacteres: UISwitch!
     @IBOutlet weak var tfPasswordGenerated: UITextField!
     @IBOutlet weak var generateButton: UIButton!
+    @IBOutlet weak var slNumberOfCharacters: UISlider!
     
     var passwordViewModel = PasswordViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        slNumberOfCharacters.value = 8
     }
     
     //    MARK:- Actions
