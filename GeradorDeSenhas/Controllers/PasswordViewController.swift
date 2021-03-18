@@ -34,7 +34,6 @@ class PasswordViewController: UIViewController {
     }
     
     /// Botão gerar senha
-    /// - Parameter sender: UIButton
     @IBAction func GenerateButtonHasPressed(_ sender: UIButton) {
         generateNewPassword()
     }

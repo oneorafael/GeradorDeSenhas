@@ -13,7 +13,7 @@ class PasswordViewModel {
     var passwordModel: Password!
     var passwordGenerated: String {return passwordModel.passwordGenerated}
     var passwords:[String] = []
-
+    
     func useLowercase(lowercase:Bool) -> Bool {
         return lowercase
     }
@@ -59,12 +59,6 @@ class PasswordViewModel {
     }
     
     /// Verifica se ao menos 1 switch está ativado, caso contrario ele não permitirá que a função generate seja chamada
-    /// - Parameters:
-    ///   - useCapitalLetters: Bool
-    ///   - useLowercase: bool
-    ///   - useNumbers: bool
-    ///   - useSpecialCharacters: bool
-    /// - Returns: bool
     func checkingSwitchStatus(useCapitalLetters:Bool,useLowercase: Bool, useNumbers:Bool, useSpecialCharacters:Bool) -> Bool {
         var status = true
         if useCapitalLetters == false && useLowercase == false &&  useNumbers == false && useSpecialCharacters == false {
@@ -72,5 +66,5 @@ class PasswordViewModel {
         }
         return status
     }
-
+    
 }
